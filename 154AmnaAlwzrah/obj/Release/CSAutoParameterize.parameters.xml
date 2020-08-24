@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="customerDbConnectionStringxxx-Web.config Connection String" description="customerDbConnectionStringxxx Connection String used in web.config by the application to access the database." defaultValue="Data Source=LAPTOP-LTTT7K4H\SQLEXPRESS;Initial Catalog=customerDb;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\amina\\source\\repos\\154AmnaAlwzrah\ -\ Copy\\154AmnaAlwzrah\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='customerDbConnectionStringxxx']/@connectionString" />
+  </parameter>
+  <parameter name="customerDbConnectionString-Web.config Connection String" description="customerDbConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=SQL5050.site4now.net;Initial Catalog=DB_A66398_customer;User Id=DB_A66398_customer_admin;Password=customer1234" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\amina\\source\\repos\\154AmnaAlwzrah\ -\ Copy\\154AmnaAlwzrah\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='customerDbConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="customerDbConnectionStringxx-Web.config Connection String" description="customerDbConnectionStringxx Connection String used in web.config by the application to access the database." defaultValue="Data Source=SQL5045.site4now.net;Initial Catalog=DB_A647C0_amna;User Id=DB_A647C0_amna_admin;Password=amna12345678" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\amina\\source\\repos\\154AmnaAlwzrah\ -\ Copy\\154AmnaAlwzrah\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='customerDbConnectionStringxx']/@connectionString" />
+  </parameter>
+</parameters>

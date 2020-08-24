@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="_154AmnaAlwzrah.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <!--add the bootstrap-->
+    <meta charset="utf-8″>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="~/Content/bootstrap.css" runat="server" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" runat="server" />
+
+    <link href="~/Content/MyStyleSheet.css" rel="stylesheet" type="text/css" runat="server" />
+
+
+    <script type="text/javascript">
+        console.log("hi from master page");
+               
+            </script>
+    <style>
+
+        .auto-style1 {
+            width: 1557px;
+        }
+
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Amna's ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link  href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#c2d6d6; border-color:white">
+            <asp:label  class="auto-style1" id="lblUser" runat="server"> </asp:label>
+            <div class="container" style="display: block">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="border-color:white">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--<a class="navbar-brand" runat="server" href="~/Default.aspx">AMNA</a>-->
+                </div>
+                <div class="navbar-collapse collapse">
+                    <!--<ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/MyNewFolder/customerInfoForm.aspx">Customer Form</a></li>
+                        <li><a runat="server" href="~/MyNewFolder/Login.aspx">Login</a></li>
+                       
+                    </ul>-->
+
+                    <nav class="nav">
+                        <a class="nav-item nav-link active amna" runat="server" href="~/Default.aspx" style="color: #797979;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='#797979'">AMNA</a>
+                        <a runat="server" href="~/MyNewFolder/customerInfoForm.aspx" class="nav-item nav-link" style="color: #797979;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='#797979'">Customer Form</a>
+                        <a runat="server" href="~/marketing/default.aspx" class="nav-item nav-link" style="color: #797979;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='#797979'" visible="false" ID="marOnly">Marketing</a>
+                        <a runat="server" href="~/finance/default.aspx" class="nav-item nav-link" style="color: #797979;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='#797979'"  ID="finOnly">Finance</a>
+                        
+                        <a runat="server" href="~/admin/default.aspx" class="nav-item nav-link" style="color: #797979;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='#797979'"  ID="adminOnly">Admin</a>
+                        <a runat="server" href="~/MyNewFolder/Login.aspx" class="nav-item nav-link" style="color: #797979;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='#797979'">Login</a>
+                        
+                        <a runat="server" class="nav-item nav-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        <asp:label runat="server" id="aUser" class="nav-item nav-link" style="color: #797979;"></asp:label>
+                        <asp:LinkButton ID="lbLogOut" runat="server" OnClick="lbLogOut_Click"  style="color: #797979; float: right; align-self: center;" onMouseOver="this.style.color='#ea6a91'" onMouseOut="this.style.color='#797979'" Visible="False" >Log Out!</asp:LinkButton>
+                </nav>
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+               
+            </asp:ContentPlaceHolder>
+           
+         </div>
+        
+        <footer class="navbar-inverse footer" style="background-color:#c2d6d6">
+              
+                <p id="footer">&copy; <%: DateTime.Now.Year %> - #154 Amna Alwzrah </p>
+       </footer>
+        </form>
+
+       <!--jQuery first, then Popper.js, then Bootstrap JS-->
+       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    
+       </body>
+</html>
